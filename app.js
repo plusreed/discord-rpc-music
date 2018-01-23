@@ -1,13 +1,13 @@
 const DiscordRPC = require("discord-rpc");
 const fs = require('fs')
 
+// TODO: Separate these into a configuration file.
 const ClientId = 'client_id_here';
+const snip = "path/to/snip/directory";
 
 DiscordRPC.register(ClientId);
 
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
-
-const snip = "path/to/snip/directory";
 
 // Get Snip files.
 // The user needs to have "Save Information Separately" enabled in Snip for this to work.
